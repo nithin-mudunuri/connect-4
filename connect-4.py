@@ -13,9 +13,13 @@ def main():
     def draw_row(y):
         for i in range(7):
             x = 50 + i * 150
+            squares = Rectangle(Point(x - 75, y - 75), Point(x + 75, y + 75))
+            squares.setFill("blue")
+            squares.draw(win)
             circle = Circle(Point(x, y), 50)
-            circle.setFill("gray")
+            circle.setFill("dark gray")
             circle.draw(win)
+
 
     # Draw 6 rows of circles
     y_positions = [100, 250, 400, 550, 700, 850]
@@ -62,6 +66,8 @@ def main():
             z.setSize(30)
             z.setFill("red")
             z.draw(win)
+    #def player_wins():
+
 
     while True:
         click_point = win.getMouse()
